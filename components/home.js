@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Button } from 'react-native';
 import React, {useState, useEffect} from "react";
 
 export default function Home(props) {
@@ -8,8 +8,8 @@ export default function Home(props) {
     return (
 
         <View style={styles.home}>
-        <Text>{props.msg}</Text>
-        <Text style={styles.name}>{name}</Text>
+            <Text style={styles.name}>{name}</Text>
+            <Button title="go to Details" onPress={() => props.navigation.navigate("Detail")}/>
         </View>
     );
 }
